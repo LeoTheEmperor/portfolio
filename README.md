@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tanishq.nayak — portfolio
 
-## Getting Started
+Personal portfolio site. Built with Next.js 15 + Tailwind CSS, deployed on Vercel.
 
-First, run the development server:
+**Live:** [your-subdomain.vercel.app](https://your-subdomain.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## About
+
+Final-year CS student at PDEU, Gandhinagar. Working at the boundary of hardware design and security — post-quantum cryptography on FPGA, ML-based intrusion detection, and more.
+
+---
+
+## Stack
+
+- **Framework:** Next.js 15 (App Router, fully static)
+- **Styling:** Tailwind CSS + CSS custom properties
+- **Fonts:** IBM Plex Sans + IBM Plex Mono
+- **Deployment:** Vercel
+
+---
+
+## Project structure
+
+```
+app/
+├── data/
+│   └── projects.ts        # Single source of truth for all project content
+├── components/
+│   ├── Nav.tsx
+│   └── Footer.tsx
+├── about/
+│   └── page.tsx
+├── projects/
+│   ├── page.tsx
+│   └── [slug]/
+│       └── page.tsx
+├── globals.css
+├── layout.tsx
+└── page.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding or editing a project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All project content lives in `app/data/projects.ts`. Each entry follows this shape:
 
-## Deploy on Vercel
+```ts
+{
+  slug: "project-slug",          // URL: /projects/project-slug
+  label: "01",                   // Display number
+  title: "Project Title",
+  tagline: "One-line description shown in listings.",
+  track: "hardware",             // "hardware" | "security" | "software"
+  summary: "...",                // First paragraph on the project page
+  detail: "...",                 // Second paragraph
+  highlights: ["...", "..."],    // Bullet points in the highlights box
+  stack: ["Verilog", "FPGA"],    // Tech tags
+  repoUrl: "https://github.com/...",
+  demoUrl: "https://...",        // Optional
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+No other files need to change when adding a project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Updating the live site
+
+Push to `master` — Vercel redeploys automatically.
+
+```bash
+git add .
+git commit -m "your message"
+git push
+```
