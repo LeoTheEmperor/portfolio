@@ -1,8 +1,8 @@
-# tanishq.nayak — portfolio
+# nayaktanishq — portfolio
 
 Personal portfolio site. Built with Next.js 15 + Tailwind CSS, deployed on Vercel.
 
-**Live:** [your-subdomain.vercel.app](https://your-subdomain.vercel.app)
+**Live:** [nayaktanishq.vercel.app](https://nayaktanishq.vercel.app)
 
 ---
 
