@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Pure digital logic, no microcontroller",
     ],
     stack: ["Verilog", "Digital Logic", "FPGA", "Testbench Design"],
-    repoUrl: "https://github.com/LeoTheEmperor",
+    repoUrl: "https://github.com/LeoTheEmperor/buzzer-system-8player",
   },
   {
     slug: "rnn-sentiment",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "Architecture comparison grounded in gradient-flow analysis",
     ],
     stack: ["Python", "PyTorch", "Word2Vec", "NLP", "Deep Learning"],
-    repoUrl: "https://github.com/LeoTheEmperor",
+    repoUrl: "https://github.com/LeoTheEmperor/rnn-gru-lstm-sentiment",
   },
   {
     slug: "wellnest",
@@ -103,6 +103,6 @@ export const projects: Project[] = [
       "React + Flask stack",
     ],
     stack: ["React", "Flask", "Python", "Full-Stack"],
-    repoUrl: "https://github.com/LeoTheEmperor",
+    repoUrl: "https://github.com/LeoTheEmperor/wellNest",
   },
 ];
